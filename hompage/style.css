@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gwendolyn&display=swap');
+.header{
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;  
+}
+body{
+    box-sizing: border-box;
+    margin:0;
+    font-family: 'Kanit', sans-serif;
+    
+}
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    border-bottom: 1px solid #DDD9D9;
+    
+}
+.navbar-item{
+    width:fit-content;
+    margin: 0 100px 0 10px;
+}
+.navbar-list{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+.white-text{
+    color: black;
+    text-decoration: none;
+}
+
+.user{
+    display: flex;
+    margin-right: 23px;
+}
+.user-name{
+    color: black;
+    margin-left: 10px;
+}
+.user-img{
+    width:25px;
+    height: 25px;
+    background-color: #01939A;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.centent-body{
+    width: 100%;
+
+}
+
+
+.slider{
+  width: 1700px;
+  max-width: 100vw;
+  height: 700px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;  
+}
+.slider .list{
+  position: absolute;
+  width: max-content;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  transition: 1s;
+}
+.slider .list img{
+  width: 1700px;
+  max-width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.slider .buttons{
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.slider .buttons button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
+  color: #fff;
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
+}
+.slider .dots{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li{
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .dots li.active{
+  width: 30px;
+}
+@media screen and (max-width: 768px){
+  .slider{
+      height: 400px;
+  }
+}
+
+.slogan1 {
+  width: 100%;
+  top: 45%;
+  position: absolute;
+  color: black;
+  font-size: 42px;
+  text-align: center;
+  font-weight: 700;
+  word-wrap: break-word;
+  justify-content: space-around;
+  display: flex;
+}
+.slogan2{
+    width: 100%;
+    top: 52%;
+    position: absolute;
+    color: black    ;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    word-wrap: break-word;
+    justify-content: space-around;
+    display: flex;
+
+}
+
+.footer{
+    width: 100%;
+    height: 276px;
+}
+.footer-statistic{
+    width: 100%;
+    height: 276px;
+    margin-top:200px;
+    bottom: 0;
+}
+.footer-content-1{
+    width: 100%;
+    height: 233px;
+    background-color: #495057;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+.footer-content-2
+{
+    width: 100%;
+    height: 40px;
+    background-color: #383E45;
+    display: flex;
+    align-items: center;
+    
+}
+.footer-content-11{
+    height: 180px;
+    display: flex;
+    width:100%;
+    
+    justify-content: space-around;
+}
+.footer-content-2 span{
+    margin-left: 82px;
+    color: white;
+}
+.useful-link-list{
+    list-style: none;
+        padding-inline-start: 0;
+    color: #35979C;
+}
+.useful-link span{
+    font-weight: 700;
+}
+.about-us span{
+    font-weight: 700;
+}
+
+.about-us p{
+    width: 646px;
+}
+.Connect-with-us ul{
+    list-style: none;
+    padding-inline-start: 0;
+    color: #35979C;
+    font-size: 16px;
+}
+.Connect-with-us{
+    font-weight: 700;
+}
