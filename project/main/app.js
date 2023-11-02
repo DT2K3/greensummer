@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Create table header
                 const tableHeader = table.createTHead();
                 const headerRow = tableHeader.insertRow();
-                const headerLabels = ["Project ID", "Project Name", "Quantity", "Start Date", "End Date", "Address", "Ability List" , "Status"];
+                const headerLabels = ["Project ID", "Project Name", "Quantity", "Start Date", "End Date", "Address", "Ability List", "Status"];
 
                 headerLabels.forEach(label => {
                     const headerCell = document.createElement("th");
@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <td>${project.EndDate}</td>
                         <td>${project.Address}</td>
                         <td>${project.AbilityList}</td>
-                        <td>${project.Status}</td>
-
+                        <td class="${getStatusClass(project.Status)}">${project.Status}</td>
                     `;
                 });
 
@@ -49,4 +48,18 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => {
             console.error("Error fetching data: " + error);
         });
+
+    // Function to get the CSS class for each status
+    function getStatusClass(status) {
+        switch (status) {
+            case "approved":
+                return "status-accepted";
+            case "waiting":
+                return "status-waiting";
+            case "rejected":
+                return "status-rejected";
+            default:
+                return "";
+        }
+    }
 });
