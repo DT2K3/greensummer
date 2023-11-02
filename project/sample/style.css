@@ -60,7 +60,7 @@ body{
 
 }
 
-.view, .project-info{
+.form{
     display: flex;
     align-items: flex-start;
     flex-direction: column;
@@ -68,10 +68,9 @@ body{
     margin-right: 20%;
     background-color: white;
     padding: 20px 20px 20px 20px;
-    margin-bottom: 1%;
+    margin-bottom: 10%;
     border-radius: 10px;
-    /* gap: 10px; */
-    margin-top: 1%;
+    gap: 10px
 }
 
 .text{

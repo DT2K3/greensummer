@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             const listMyExistingProj = document.querySelector(".listMyExistingProj");
+            const projectDetails = document.querySelector(".project-info");
 
             if (data.length > 0) {
                 // Create a table element
@@ -37,10 +38,22 @@ document.addEventListener("DOMContentLoaded", function () {
                         <td class="${getStatusClass(project.Status)}">${project.Status}</td>
                     `;
 
-                    // Add a click event listener to each row for navigation
+                    // Add a click event listener to each row
                     row.addEventListener("click", () => {
-                        navigateToProjectPage(project.ID);
+                        // Populate the project details section with the clicked project's data
+                        document.getElementById("projectID").textContent = project.ID;
+                        document.getElementById("projectName").textContent = project.ProjectName;
+                        document.getElementById("projectImage").src = project.Img;
+                        document.getElementById("projectDescription").textContent = project.Description;
+                        document.getElementById("projectQuantity").textContent = project.Quantity;
+                        document.getElementById("projectStartDate").textContent = project.StartDate;
+                        document.getElementById("projectEndDate").textContent = project.EndDate;
+                        document.getElementById("projectAddress").textContent = project.Address;
+                        document.getElementById("projectAbilities").textContent = project.AbilityList;
+                        document.getElementById("projectStatus").textContent = project.Status;
                     });
+
+                    
                 });
 
                 // Append the table to the existing HTML element
@@ -66,10 +79,5 @@ document.addEventListener("DOMContentLoaded", function () {
             default:
                 return "";
         }
-    }
-
-    // Function to navigate to the project page with the given project ID
-    function navigateToProjectPage(projectID) {
-        window.location.href = `./form/index.html?projectID=${projectID}`;
     }
 });
