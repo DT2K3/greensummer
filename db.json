@@ -1,0 +1,72 @@
+{
+    "users": [
+        {
+            "username": "Trai chuoi 1",
+            "email": "dasdas@dd",
+            "password": "1111",
+            "role": "user"
+        },
+        {
+            "username": "Trai chuoi 1",
+            "email": "da2das@dd",
+            "password": "1111",
+            "role": "user"
+        },
+        {
+            "username": "Trai chuoi 1",
+            "email": "dasd4s@dd",
+            "password": "1111",
+            "role": "user"
+        },
+        {
+            "username": "Trai chuoi 1",
+            "email": "dasddds@dd",
+            "password": "1111",
+            "role": "user"
+        },
+        {
+            "username": "Trai chuoi 1",
+            "email": "dasdsssas@dd",
+            "password": "1111",
+            "role": "user"
+        }
+    ],
+    "projects": [
+        {
+            "ID": 1,
+            "ProjectName": "Project 1",
+            "Img": "image1.jpg",
+            "Quantity": 5,
+            "StartDate": "2023-01-15",
+            "EndDate": "2023-02-15",
+            "Address": "123 Main St, City",
+            "AbilityList": "Skill A, Skill B",
+            "Status": "approved"
+        },
+        {
+            "ID": 2,
+            "ProjectName": "Project 2",
+            "Img": "image2.jpg",
+            "Quantity": 8,
+            "StartDate": "2023-02-01",
+            "EndDate": "2023-03-01",
+            "Address": "456 Elm St, Town",
+            "AbilityList": "Skill C, Skill D",
+            "Status": "rejected"
+        },
+        {
+            "ID": 3,
+            "ProjectName": "Project 3",
+            "Img": "image3.jpg",
+            "Quantity": 3,
+            "StartDate": "2023-03-10",
+            "EndDate": "2023-04-10",
+            "Address": "789 Oak St, Village",
+            "AbilityList": "Skill E, Skill F",
+            "Status": "waiting"
+        }
+      ],
+    "profile": {
+        "name": "typicode"
+    }
+}
