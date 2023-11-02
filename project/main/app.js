@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch data from the API
-    fetch("http://localhost:3000/projects")
+    fetch("http://localhost:3000/cl/projects")
         .then(response => response.json())
         .then(data => {
             const listMyExistingProj = document.querySelector(".listMyExistingProj");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Create table header
                 const tableHeader = table.createTHead();
                 const headerRow = tableHeader.insertRow();
-                const headerLabels = ["Project ID", "Project Name", "Quantity", "Start Date", "End Date", "Address", "Ability List", "Status"];
+                const headerLabels = ["ProjectID", "Project Name", "Quantity", "Start Date", "End Date", "Address", "Ability List", "Status"];
 
                 headerLabels.forEach(label => {
                     const headerCell = document.createElement("th");
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 data.forEach(project => {
                     const row = tableBody.insertRow();
                     row.innerHTML = `
-                        <td>${project.ID}</td>
-                        <td>${project.ProjectName}</td>
+                        <td>${project.IDProject}</td>
+                        <td>${project.Project_Name}</td>
                         <td>${project.Quantity}</td>
-                        <td>${project.StartDate}</td>
+                        <td>${project.BeginDate}</td>
                         <td>${project.EndDate}</td>
                         <td>${project.Address}</td>
                         <td>${project.AbilityList}</td>
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     // Add a click event listener to each row for navigation
                     row.addEventListener("click", () => {
-                        navigateToProjectPage(project.ID);
+                        navigateToProjectPage(project.IDProject);
                     });
                 });
 
@@ -67,9 +67,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 return "";
         }
     }
-
+    console.log(projectID);
     // Function to navigate to the project page with the given project ID
     function navigateToProjectPage(projectID) {
-        window.location.href = `./form/index.html?projectID=${projectID}`;
+        console.log(projectID);
+        window.location.href = `../form/index.html?projectID=${projectID}`;
     }
 });
